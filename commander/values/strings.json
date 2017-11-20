@@ -1,0 +1,16 @@
+{
+    "help": {
+        "description": "A list of available commands",
+        "content": [
+            "/h - List of all commands",
+            "/s - Overall summary",
+            "/g - List of connected GPUs",
+            "/c - List connected clients",
+            "/n - List of connected gateways",
+            "/r - Reboot clients"
+        ]
+    },
+    "gateway": {
+        "error": "No gateways connected"
+    }
+}

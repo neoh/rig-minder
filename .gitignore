@@ -1,0 +1,4 @@
+conf/.env
+conf/compiled/
+server-whitelist/output/
+**.notes

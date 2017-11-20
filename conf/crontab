@@ -1,0 +1,6 @@
+@reboot /usr/bin/apt-get update -q -y >> /var/log/apt/apt-updates.log
+@reboot /usr/bin/apt-get install openssh-server -q -y >> /var/log/apt/apt-updates.log
+@reboot /usr/bin/python <path>/server-whitelist/update.py eu > /tmp/cron-log-update.log 2>&1 && /bin/bash <path>/conf/compiled/iptables.sh > /tmp/cron-log-iptables.log 2>&1 
+@reboot /usr/bin/python <path>/commander/run.sh client
+@daily /sbin/reboot now
+

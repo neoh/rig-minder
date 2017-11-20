@@ -1,0 +1,19 @@
+source-directory /etc/network/interfaces.d
+
+auto lo
+iface lo inet loopback
+
+allow-hotplug <output_interface>
+iface <output_interface> inet static
+    address 192.168.220.1
+    netmask 255.255.255.0
+    network 192.168.220.0
+    broadcast 192.168.220.255
+
+allow-hotplug <input_interface>
+iface wlan0 inet static
+        wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+        address 192.168.1.14
+        netmask 255.255.255.0
+        gateway 192.168.1.1
+        
